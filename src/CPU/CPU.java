@@ -24,6 +24,20 @@ public class CPU {
         memory[addr] = value;
     }
 
+    public void SUB(Register r1,Register r2, Register r3){
+        r3.valueRegister=r1.valueRegister-r2.valueRegister;
+    }
+    public void MULT(Register r1,Register r2, Register r3){
+        r3.valueRegister=r2.valueRegister*r1.valueRegister;
+    }
+    public void DIV(Register r1,Register r2, Register r3){
+        r3.valueRegister=r1.valueRegister/r2.valueRegister;
+    }
+
+    public void SHOW(){
+        System.out.println(r1.valueRegister+ " "+r2.valueRegister+" " + r3.valueRegister+" "+r4.valueRegister);
+    }
+
 
 
 }

@@ -6,21 +6,22 @@ public class Main {
 
         cpu.INIT(0,10);
         cpu.INIT(1,20);
-        cpu.INIT(2,0);
-        System.out.println(cpu.memory[0]);
-        System.out.println(cpu.memory[1]);
-        System.out.println(cpu.memory[2]);
+        cpu.INIT(2,30);
+        cpu.SHOW();
         cpu.LOAD(cpu.r1, 0);
         cpu.LOAD(cpu.r2, 1);
-        cpu.ADD(cpu.r1, cpu.r2, cpu.r3);
+        cpu.LOAD(cpu.r3, 2);
+        cpu.SHOW();
+        cpu.SUB(cpu.r1, cpu.r2, cpu.r4);
+        cpu.SHOW();
+        cpu.ADD(cpu.r4, cpu.r3, cpu.r3);
+
+
         cpu.STORE(cpu.r3, 2);
-        System.out.println(cpu.memory[0]);
-        System.out.println(cpu.memory[1]);
-        System.out.println(cpu.memory[2]);
+
+        cpu.SHOW();
 
 
-        String binary = Integer.toBinaryString(9999);
-        System.out.println(binary);
     }
 
 }
