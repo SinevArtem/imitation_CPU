@@ -43,12 +43,16 @@ public class CPU implements ICpu {
                         AllReg[i].valueRegister=t;
                     }
                 }
+                break;
             case "div":
                 AllReg[3].valueRegister = AllReg[0].valueRegister / AllReg[1].valueRegister;
+                break;
             case "sub":
                 AllReg[3].valueRegister = AllReg[0].valueRegister - AllReg[1].valueRegister;
+                break;
             case "mult":
                 AllReg[3].valueRegister = AllReg[0].valueRegister * AllReg[1].valueRegister;
+                break;
 
         }
 
